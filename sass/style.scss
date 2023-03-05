@@ -1,0 +1,70 @@
+@charset 'utf-8';
+@import 'reset';
+
+$gray-color: #999;
+
+.keyvisual {
+  height: 100vh;
+  width: 100%;
+  background-color: #999;
+}
+
+
+main {
+  position: relative;
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    padding: 0 100px;
+    background-color: yellow;
+    position: absolute;
+    top: 0;
+    .navbar-text {
+      display: flex;
+      font-size: 1.6rem;
+      &__right {
+        margin-left: 30px;
+        &--small {
+          font-size: 1.2rem;
+        }
+      }
+    }
+    .navbar-language {
+      font-size: 1.3rem;
+      a {
+        font-weight: bold;
+        text-decoration: none;
+        color: #000;
+        &.none {
+          color: $gray-color;
+        }
+      }
+    }
+    .navbar-menu {
+      span {
+        display: block;
+        height: 2px;
+        width: 35px;
+        background-color: #000;
+        &:first-child {
+          transform: translateY(-10px);
+        }
+        &:last-child {
+          transform: translateY(10px);
+        }
+      }
+    }
+  }
+  .main-block {
+    width: 100%;
+    &--margin {
+      margin-top: 60px;
+    }
+  }
+}
+
+// 次回やること
+// ・スクロール時mainがずれる（headerが固定されると、header分の高さがなくなるから）
