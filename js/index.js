@@ -1,9 +1,10 @@
 $(function() {
   const navBar = $('#navBar');
   const navPosition = navBar.offset().top;
+  let scroll = 0;
 
   $(window).on("scroll", function() {
-    let scroll = $(window).scrollTop();
+    scroll = $(window).scrollTop();
 
     if(scroll >= navPosition) {
       navBar.css({position:'fixed', top:'0'});
